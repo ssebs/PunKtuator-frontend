@@ -1,6 +1,6 @@
-# punctuator 
+# PunKtuator Frontend 
 
-Punctuator frontend.
+React frontend for PunKtuator project
 
 ## Todo:
 - [x] Create basic wireframe
@@ -8,14 +8,31 @@ Punctuator frontend.
 - [ ] Sample REST API (JS based)
 - [ ] Debounce submit on type
 - [ ] Update to real REST API
+- [ ] Style
 - [ ] Refactor
 - [ ] Add tests?
+
+
+## Assumed API Spec
+POST `/punctuate`
+```json
+{
+    "lang": <Str>,
+    "text": <Str>
+}
+```
+
+## Building
+- Output will be HTML+JS in `build/` dir, serve these files via nginx, apache, etc
+- Clone this repo & `cd` into it
+- `$ npm install`
+- `$ npm run build`
 
 ## Text Wireframe
 ```
 -------------------------------------
 |                                   |
-|             Punctuator            |
+|             PunKtuator            |
 |                                   |
 |      Input      |     Output      |
 |  -------------------------------  |
@@ -35,18 +52,3 @@ Punctuator frontend.
 |                                   |
 -------------------------------------
 ```
-
-## Assumed API Spec
-POST `/punctuate`
-```json
-{
-    "lang": <Str>,
-    "text": <Str>
-}
-```
-
-## Building
-- Clone this repo & `cd` into it
-- `$ npm install`
-- `$ npm run build`
-
