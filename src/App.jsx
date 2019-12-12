@@ -6,7 +6,7 @@ import { testPunctuate } from "./API";
 
 const App = () => {
     const [lang, setLang] = useState("english");
-    const [inputText, setInputText] = useState("enter you're text here");
+    const [inputText, setInputText] = useState("Enter your text here...");
     const [outputText, setOutputText] = useState("");
 
     const handleLangChange = e => {

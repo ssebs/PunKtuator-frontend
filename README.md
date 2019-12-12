@@ -5,7 +5,7 @@ React frontend for PunKtuator project
 ## Todo:
 - [x] Create basic wireframe
 - [x] Structure JS
-- [ ] Sample REST API (JS based)
+- [x] Sample REST API (JS based)
 - [ ] Debounce submit on type
 - [ ] Update to real REST API
 - [ ] Style
@@ -17,8 +17,8 @@ React frontend for PunKtuator project
 POST `/punctuate`
 ```json
 {
-    "lang": <Str>,
-    "text": <Str>
+    "lang": "myLangHere",
+    "text": "myTextHere"
 }
 ```
 
