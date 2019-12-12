@@ -2,17 +2,16 @@ import React, { useState } from "react";
 
 const LangSelector = props => {
     return (
-        <div>
-            <select
-                name="lang"
-                onChange={props.handleChange}
-                defaultValue="english"
-            >
-                <option value="english">English</option>
-                <option value="german">German</option>
-                <option value="french">French</option>
-            </select>
-        </div>
+        <select
+            name="lang"
+            onChange={props.handleChange}
+            defaultValue="english"
+            className="btn btn-outline-primary mx-1"
+        >
+            <option value="english">English</option>
+            <option value="german">German</option>
+            <option value="french">French</option>
+        </select>
     );
 };
 

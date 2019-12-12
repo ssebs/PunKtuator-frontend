@@ -5,19 +5,26 @@ body {
         "Helvetica Neue", sans-serif;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+.center {
+    text-align: center;
 }
 
 .textboxcontainer {
     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: stretch;
-	align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin-bottom: 2rem;
 }
-.center{
-    text-align: center;
+
+.textboxhalf {
+    width: 45%;
+    min-height: 300px;
+}
+
+.textbox {
+    width: 100%;
+    min-height: 250px;
 }

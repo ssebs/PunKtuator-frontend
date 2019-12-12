@@ -3,21 +3,21 @@ import React from "react";
 const TextBoxes = props => {
     return (
         <div className="textboxcontainer">
-            <div>
+            <div className="textboxhalf">
                 <h3>Input</h3>
                 <textarea
+                    className="textbox"
                     defaultValue={props.inputText}
-                    name="input"
                     onChange={props.inputChange}
                 ></textarea>
             </div>
-            <div>
+            <div className="textboxhalf">
                 <h3>Output</h3>
                 <textarea
-                    name="input"
-                    disabled
+                    className="textbox"
                     value={props.outputText}
                     onChange={props.outputChange}
+                    disabled
                 ></textarea>
             </div>
         </div>
