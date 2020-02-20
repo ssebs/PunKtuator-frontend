@@ -26,17 +26,19 @@ const App = () => {
         <div className="text-center">
             <h1 className="my-3">PunKtuator</h1>
             <hr />
-            <TextBoxes
-                inputChange={e => setInputText(e.target.value)}
-                inputText={inputText}
-                outputText={outputText}
-            />
-            <div className="d-flex justify-content-center">
-                <LangSelector handleChange={e => setLang(e.target.value)} />
-                <button onClick={handleSubmit} className="btn btn-primary mx-1">
-                    Punctuate!
-                </button>
-            </div>
+            <form onSubmit={handleSubmit}>
+                <TextBoxes
+                    inputChange={e => setInputText(e.target.value)}
+                    inputText={inputText}
+                    outputText={outputText}
+                />
+                <div className="d-flex justify-content-center">
+                    <LangSelector handleChange={e => setLang(e.target.value)} />
+                    <button type="submit" className="btn btn-primary mx-1">
+                        Punctuate!
+                    </button>
+                </div>
+            </form>
             <hr />
             <p>&copy;2020 Varnith Chordia &amp; Sebastian Safari </p>
         </div>
