@@ -1,11 +1,15 @@
 // API.js - API helper
 
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "http://heaviside.parc.xerox.com:5000";
 
 export const doPunctuate = obj => {
     return new Promise((resolve, reject) => {
-        fetch(`${BASE_URL}/punctuate/`, {
+        fetch(`${BASE_URL}/punctuate`, {
             method: "post",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
             body: JSON.stringify(obj)
         })
             .then(r => r.json())

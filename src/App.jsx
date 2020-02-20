@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LangSelector from "./components/LangSelector";
 import TextBoxes from "./components/TextBoxes";
 
-import { testPunctuate } from "./API";
+import { doPunctuate } from "./API";
 
 const App = () => {
     const [lang, setLang] = useState("english");
@@ -12,11 +12,11 @@ const App = () => {
     const handleSubmit = e => {
         e.preventDefault();
         const RESTObj = {
-            lang,
-            text: inputText
+            language: lang,
+            input_text: inputText
         };
         // console.log(RESTObj);
-        testPunctuate(RESTObj).then(r => {
+        doPunctuate(RESTObj).then(r => {
             // console.log(r);
             setOutputText(r.text);
         });
