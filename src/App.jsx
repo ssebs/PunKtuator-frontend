@@ -9,14 +9,6 @@ const App = () => {
     const [inputText, setInputText] = useState("Enter your text here...");
     const [outputText, setOutputText] = useState("");
 
-    const handleLangChange = e => {
-        setLang(e.target.value);
-    };
-
-    const handleInputChange = e => {
-        setInputText(e.target.value);
-    };
-
     const handleSubmit = e => {
         e.preventDefault();
         const RESTObj = {
@@ -31,23 +23,22 @@ const App = () => {
     };
 
     return (
-        <div className="center">
-            <h1 className="mt-3">PunKtuator</h1>
-            <br />
+        <div className="text-center">
+            <h1 className="my-3">PunKtuator</h1>
             <hr />
             <TextBoxes
-                inputChange={handleInputChange}
+                inputChange={e => setInputText(e.target.value)}
                 inputText={inputText}
                 outputText={outputText}
             />
             <div className="d-flex justify-content-center">
-                <LangSelector handleChange={handleLangChange} />
+                <LangSelector handleChange={e => setLang(e.target.value)} />
                 <button onClick={handleSubmit} className="btn btn-primary mx-1">
                     Punctuate!
                 </button>
             </div>
             <hr />
-            <p>&copy;2019 Varnith Chordia &amp; Sebastian Safari </p>
+            <p>&copy;2020 Varnith Chordia &amp; Sebastian Safari </p>
         </div>
     );
 };

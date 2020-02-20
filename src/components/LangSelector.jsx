@@ -6,7 +6,7 @@ const LangSelector = props => {
             name="lang"
             onChange={props.handleChange}
             defaultValue="english"
-            className="btn btn-outline-primary mx-1"
+            className="form-control d-inline-block w-auto mx-1"
         >
             <option value="english">English</option>
             <option value="german">German</option>
