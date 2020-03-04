@@ -3,6 +3,8 @@ import LangSelector from "./components/LangSelector";
 import TextBoxes from "./components/TextBoxes";
 
 import { doPunctuate } from "./API";
+import Train from "./components/Train";
+
 
 const App = () => {
     const [lang, setLang] = useState("english");
@@ -25,20 +27,70 @@ const App = () => {
     return (
         <div className="text-center">
             <h1 className="my-3">PunKtuator</h1>
+            <ul className="nav nav-tabs" role="tablist">
+                <li className="nav-item">
+                    <a
+                        class="nav-link active"
+                        id="home-tab"
+                        data-toggle="tab"
+                        href="#home"
+                        role="tab"
+                        aria-controls="home"
+                        aria-selected="true"
+                    >
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        id="train-tab"
+                        data-toggle="tab"
+                        href="#train"
+                        role="tab"
+                        aria-controls="train"
+                        aria-selected="false"
+                    >
+                        Train
+                    </a>
+                </li>
+            </ul>
             <hr />
-            <form onSubmit={handleSubmit}>
-                <TextBoxes
-                    inputChange={e => setInputText(e.target.value)}
-                    inputText={inputText}
-                    outputText={outputText}
-                />
-                <div className="d-flex justify-content-center">
-                    <LangSelector handleChange={e => setLang(e.target.value)} />
-                    <button type="submit" className="btn btn-primary mx-1">
-                        Punctuate!
-                    </button>
+            <div className="tab-content" id="myTabContent">
+                <div
+                    class="tab-pane fade show active"
+                    id="home"
+                    role="tabpanel"
+                    aria-labelledby="home-tab"
+                >
+                    <form onSubmit={handleSubmit}>
+                        <TextBoxes
+                            inputChange={e => setInputText(e.target.value)}
+                            inputText={inputText}
+                            outputText={outputText}
+                        />
+                        <div className="d-flex justify-content-center">
+                            <LangSelector
+                                handleChange={e => setLang(e.target.value)}
+                            />
+                            <button
+                                type="submit"
+                                className="btn btn-primary mx-1"
+                            >
+                                Punctuate!
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <div
+                    class="tab-pane fade"
+                    id="train"
+                    role="tabpanel"
+                    aria-labelledby="train-tab"
+                >
+                    <Train />
+                </div>
+            </div>
             <hr />
             <p>&copy;2020 Varnith Chordia &amp; Sebastian Safari </p>
         </div>
