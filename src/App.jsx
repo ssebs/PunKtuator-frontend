@@ -30,7 +30,7 @@ const App = () => {
             <ul className="nav nav-tabs" role="tablist">
                 <li className="nav-item">
                     <a
-                        class="nav-link active"
+                        className="nav-link active"
                         id="home-tab"
                         data-toggle="tab"
                         href="#home"
@@ -41,9 +41,9 @@ const App = () => {
                         Home
                     </a>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <a
-                        class="nav-link"
+                        className="nav-link"
                         id="train-tab"
                         data-toggle="tab"
                         href="#train"
@@ -58,7 +58,7 @@ const App = () => {
             <hr />
             <div className="tab-content" id="myTabContent">
                 <div
-                    class="tab-pane fade show active"
+                    className="tab-pane fade show active"
                     id="home"
                     role="tabpanel"
                     aria-labelledby="home-tab"
@@ -83,7 +83,7 @@ const App = () => {
                     </form>
                 </div>
                 <div
-                    class="tab-pane fade"
+                    className="tab-pane fade"
                     id="train"
                     role="tabpanel"
                     aria-labelledby="train-tab"

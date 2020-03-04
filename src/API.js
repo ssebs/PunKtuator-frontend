@@ -38,3 +38,10 @@ export const testPunctuate = obj => {
         }
     });
 };
+
+
+export const testAnnotate = obj => {
+    return new Promise((resolve, reject) => {
+        resolve({ text: "Thanks, we'll use that to train the model soon." });
+    });
+};
