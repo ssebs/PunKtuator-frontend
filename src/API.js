@@ -24,6 +24,28 @@ export const doPunctuate = obj => {
     });
 };
 
+export const doAnnotate = obj => {
+    return new Promise((resolve, reject) => {
+        fetch(`${BASE_URL}/annotate`, {
+            method: "post",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+            body: JSON.stringify(obj)
+        })
+            .then(r => r.json())
+            .then(resp => {
+                console.log(resp);
+                resolve(resp);
+            })
+            .catch(err => {
+                console.error(err);
+                reject(err);
+            });
+    });
+};
+
 export const testPunctuate = obj => {
     return new Promise((resolve, reject) => {
         // en, de, fr

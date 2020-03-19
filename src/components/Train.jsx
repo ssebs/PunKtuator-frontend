@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { testAnnotate } from "../API";
+import { testAnnotate, doAnnotate } from "../API";
 
 const Train = () => {
     const [inputText, setInputText] = useState(null);
@@ -11,8 +11,12 @@ const Train = () => {
             input_text: inputText
         };
         // console.log(RESTObj);
-        testAnnotate(RESTObj).then(r => {
-            // console.log(r);
+        // testAnnotate(RESTObj).then(r => {
+        //     // console.log(r);
+        //     window.alert(r.text);
+        // });
+        doAnnotate(RESTObj).then(r => {
+             console.log(r);
             window.alert(r.text);
         });
     };
