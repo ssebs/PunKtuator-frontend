@@ -9,8 +9,8 @@ React frontend for PunKtuator project
 - [ ] Debounce submit on type
 - [x] Update to real REST API
 - [x] Style
-- [ ] Add upload text file option
-- [ ] Remove lang selector
+- [x] Add upload text file option
+- [x] Remove lang selector
 - [ ] Refactor
 - [ ] Add tests?
 

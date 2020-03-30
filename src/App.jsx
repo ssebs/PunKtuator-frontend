@@ -4,7 +4,6 @@ import TextBoxes from "./components/TextBoxes";
 import { doPunctuate } from "./API";
 import Train from "./components/Train";
 
-
 const App = () => {
     // const [lang, setLang] = useState("english");
     const [inputText, setInputText] = useState("Enter your text here...");
@@ -63,7 +62,12 @@ const App = () => {
                 >
                     <form onSubmit={handleSubmit}>
                         <TextBoxes
-                            inputChange={e => setInputText(e.target.value)}
+                            inputChange={e => {
+                                setInputText(e.target.value);
+                                if (e.target.value === "") {
+                                    setOutputText("");
+                                }
+                            }}
                             inputText={inputText}
                             outputText={outputText}
                         />
