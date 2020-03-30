@@ -7,8 +7,10 @@ React frontend for PunKtuator project
 - [x] Structure JS
 - [x] Sample REST API (JS based)
 - [ ] Debounce submit on type
-- [ ] Update to real REST API
-- [ ] Style
+- [x] Update to real REST API
+- [x] Style
+- [ ] Add upload text file option
+- [ ] Remove lang selector
 - [ ] Refactor
 - [ ] Add tests?
 
@@ -17,8 +19,13 @@ React frontend for PunKtuator project
 POST `/punctuate`
 ```json
 {
-    "lang": "myLangHere",
-    "text": "myTextHere"
+    "input_text": "myTextHere"
+}
+```
+POST `/annotate`
+```json
+{
+    "input_text": "myTextHere"
 }
 ```
 
@@ -27,28 +34,3 @@ POST `/punctuate`
 - Clone this repo & `cd` into it
 - `$ npm install`
 - `$ npm run build`
-
-## Text Wireframe
-```
--------------------------------------
-|                                   |
-|             PunKtuator            |
-|                                   |
-|      Input      |     Output      |
-|  -------------------------------  |
-|  | enter you're | Enter your   |  |
-|  | text here    | text here.   |  |
-|  |              |              |  |
-|  |              |              |  |
-|  |              |              |  |
-|  |              |              |  |
-|  -------------------------------  |
-|   ------------    ------------    |
-|   |  Lang  |v|    |  Submit  |    |
-|   ------------    ------------    |
-|                                   |
-|   (c) 2019 Varnith Chordia +      |
-|     Sebastian Safari              |
-|                                   |
--------------------------------------
-```

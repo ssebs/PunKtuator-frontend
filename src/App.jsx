@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import LangSelector from "./components/LangSelector";
 import TextBoxes from "./components/TextBoxes";
 
 import { doPunctuate } from "./API";
@@ -7,14 +6,13 @@ import Train from "./components/Train";
 
 
 const App = () => {
-    const [lang, setLang] = useState("english");
+    // const [lang, setLang] = useState("english");
     const [inputText, setInputText] = useState("Enter your text here...");
     const [outputText, setOutputText] = useState("");
 
     const handleSubmit = e => {
         e.preventDefault();
         const RESTObj = {
-            language: lang,
             input_text: inputText
         };
         // console.log(RESTObj);
@@ -70,9 +68,9 @@ const App = () => {
                             outputText={outputText}
                         />
                         <div className="d-flex justify-content-center">
-                            <LangSelector
+                            {/* <LangSelector
                                 handleChange={e => setLang(e.target.value)}
-                            />
+                            /> */}
                             <button
                                 type="submit"
                                 className="btn btn-primary mx-1"
