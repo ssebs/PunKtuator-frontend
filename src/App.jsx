@@ -5,8 +5,7 @@ import { doPunctuate } from "./API";
 import Train from "./components/Train";
 
 const App = () => {
-    // const [lang, setLang] = useState("english");
-    const [inputText, setInputText] = useState("Enter your text here...");
+    const [inputText, setInputText] = useState("Enter your text here.");
     const [outputText, setOutputText] = useState("");
 
     const handleSubmit = e => {
@@ -64,6 +63,7 @@ const App = () => {
                         <TextBoxes
                             inputChange={e => {
                                 setInputText(e.target.value);
+                                // Clear output if empty
                                 if (e.target.value === "") {
                                     setOutputText("");
                                 }
@@ -72,12 +72,9 @@ const App = () => {
                             outputText={outputText}
                         />
                         <div className="d-flex justify-content-center">
-                            {/* <LangSelector
-                                handleChange={e => setLang(e.target.value)}
-                            /> */}
                             <button
                                 type="submit"
-                                className="btn btn-primary mx-1"
+                                className="btn btn-primary"
                             >
                                 Punctuate!
                             </button>

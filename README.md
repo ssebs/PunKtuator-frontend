@@ -1,17 +1,17 @@
 # PunKtuator Frontend 
 
-React frontend for PunKtuator project
+React frontend for PunKtuator project.
 
 ## Todo:
 - [x] Create basic wireframe
 - [x] Structure JS
 - [x] Sample REST API (JS based)
-- [ ] Debounce submit on type
+- ~~[ ] Debounce submit on type~~
 - [x] Update to real REST API
 - [x] Style
 - [x] Add upload text file option
 - [x] Remove lang selector
-- [ ] Refactor
+- [x] Refactor
 - [ ] Add tests?
 
 
