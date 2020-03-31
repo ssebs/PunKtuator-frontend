@@ -34,3 +34,6 @@ POST `/annotate`
 - Clone this repo & `cd` into it
 - `$ npm install`
 - `$ npm run build`
+
+## LICENSE
+[MIT](./LICENSE) &copy; 2020 Varnith Chordia & Sebastian Safari
