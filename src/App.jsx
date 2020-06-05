@@ -24,11 +24,14 @@ const App = () => {
         <div className="text-center">
             <h1
                 className="py-3 bg-dark text-light"
-                style={{ fontSize: "3rem" }}
+                style={{
+                    fontSize: "3rem",
+                    boxShadow: "0px 8px 6px -6px rgba(0,0,0,0.75)",
+                }}
             >
                 PunKtuator
             </h1>
-            <ul className="nav nav-pills" role="tablist">
+            <ul className="nav nav-pills justify-content-center" role="tablist">
                 <li className="nav-item">
                     <a
                         className="nav-link active"

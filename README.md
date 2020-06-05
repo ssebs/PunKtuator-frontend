@@ -12,15 +12,14 @@ React frontend for PunKtuator project.
 - [x] Add upload text file option
 - [x] Remove lang selector
 - [x] Refactor
-- [ ] Add tests?
-- [ ] Move tabs to center
-  - [ ] Home (Description)
-  - [ ] Punctuate
-  - [ ] Annotate
-    - [ ] Dropdown box (Enter the style of text)
-      - [ ] Written
-      - [ ] Spoken
-- [ ] Add shadow to title bar
+- [x] Move tabs to center
+  - [x] Home (Description)
+  - [x] Punctuate
+  - [x] Annotate
+    - [x] Dropdown box (Enter the style of text)
+      - [x] Written
+      - [x] Spoken
+- [x] Add shadow to title bar
 
 
 ## Assumed API Spec
