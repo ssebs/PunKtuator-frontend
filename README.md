@@ -13,6 +13,14 @@ React frontend for PunKtuator project.
 - [x] Remove lang selector
 - [x] Refactor
 - [ ] Add tests?
+- [ ] Move tabs to center
+  - [ ] Home (Description)
+  - [ ] Punctuate
+  - [ ] Annotate
+    - [ ] Dropdown box (Enter the style of text)
+      - [ ] Written
+      - [ ] Spoken
+- [ ] Add shadow to title bar
 
 
 ## Assumed API Spec
@@ -25,7 +33,8 @@ POST `/punctuate`
 POST `/annotate`
 ```json
 {
-    "input_text": "myTextHere"
+    "input_text": "myTextHere",
+    "text_style": "writtenOrSpoken"
 }
 ```
 
@@ -34,6 +43,11 @@ POST `/annotate`
 - Clone this repo & `cd` into it
 - `$ npm install`
 - `$ npm run build`
+
+## Running Dev
+- Clone this repo & `cd` into it
+- `$ npm install`
+- `$ npm run start`
 
 ## LICENSE
 [MIT](./LICENSE) &copy; 2020 Varnith Chordia & Sebastian Safari

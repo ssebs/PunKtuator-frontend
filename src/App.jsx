@@ -8,13 +8,13 @@ const App = () => {
     const [inputText, setInputText] = useState("Enter your text here.");
     const [outputText, setOutputText] = useState("");
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const RESTObj = {
-            input_text: inputText
+            input_text: inputText,
         };
         // console.log(RESTObj);
-        doPunctuate(RESTObj).then(r => {
+        doPunctuate(RESTObj).then((r) => {
             // console.log(r);
             setOutputText(r.text);
         });
@@ -22,8 +22,13 @@ const App = () => {
 
     return (
         <div className="text-center">
-            <h1 className="my-3">PunKtuator</h1>
-            <ul className="nav nav-tabs" role="tablist">
+            <h1
+                className="py-3 bg-dark text-light"
+                style={{ fontSize: "3rem" }}
+            >
+                PunKtuator
+            </h1>
+            <ul className="nav nav-pills" role="tablist">
                 <li className="nav-item">
                     <a
                         className="nav-link active"
@@ -40,6 +45,19 @@ const App = () => {
                 <li className="nav-item">
                     <a
                         className="nav-link"
+                        id="punctuate-tab"
+                        data-toggle="tab"
+                        href="#punctuate"
+                        role="tab"
+                        aria-controls="punctuate"
+                        aria-selected="false"
+                    >
+                        Punctuate
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a
+                        className="nav-link"
                         id="train-tab"
                         data-toggle="tab"
                         href="#train"
@@ -47,11 +65,12 @@ const App = () => {
                         aria-controls="train"
                         aria-selected="false"
                     >
-                        Train
+                        Annotate
                     </a>
                 </li>
             </ul>
             <hr />
+            <br />
             <div className="tab-content" id="myTabContent">
                 <div
                     className="tab-pane fade show active"
@@ -59,9 +78,17 @@ const App = () => {
                     role="tabpanel"
                     aria-labelledby="home-tab"
                 >
+                    <p>Home page</p>
+                </div>
+                <div
+                    className="tab-pane fade"
+                    id="punctuate"
+                    role="tabpanel"
+                    aria-labelledby="punctuate-tab"
+                >
                     <form onSubmit={handleSubmit}>
                         <TextBoxes
-                            inputChange={e => {
+                            inputChange={(e) => {
                                 setInputText(e.target.value);
                                 // Clear output if empty
                                 if (e.target.value === "") {
@@ -72,10 +99,7 @@ const App = () => {
                             outputText={outputText}
                         />
                         <div className="d-flex justify-content-center">
-                            <button
-                                type="submit"
-                                className="btn btn-primary"
-                            >
+                            <button type="submit" className="btn btn-primary">
                                 Punctuate!
                             </button>
                         </div>
