@@ -20,6 +20,8 @@ React frontend for PunKtuator project.
       - [x] Written
       - [x] Spoken
 - [x] Add shadow to title bar
+- [ ] Add extension
+  - Pack extension/ folder
 
 
 ## Assumed API Spec
