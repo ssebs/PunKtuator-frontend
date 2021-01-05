@@ -1,0 +1,15 @@
+{
+  "short_name": "PunKtuator",
+  "name": "PunKtuator",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "PunKtuator",
+  "icons": {
+    "512": "icon.png",
+    "16": "icon-16.png"
+  },
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
