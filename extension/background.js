@@ -27,16 +27,42 @@ function mycallback(info, tab) {
       // console.log(`recv: ${val}`);
 
       // TOOD: Post to api & get response
-      const newVal = "__" + val + "__";
-
-      // Send another message with new text
-      chrome.tabs.sendMessage(
-        tab.id,
-        { type: "setVal", value: newVal },
-        (resp) => {
+      // const newVal = "__" + val + "__";
+      fetch(`${BASE_URL}/punctuate`, {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          input_text: val,
+          text_style: "written",
+        }),
+      })
+        .then((r) => r.json())
+        .then((resp) => {
           console.log(resp);
-        }
-      );
+          // Send another message with new text
+          chrome.tabs.sendMessage(
+            tab.id,
+            { type: "setVal", value: resp.text },
+            (res) => {
+              console.log(res);
+            }
+          );
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+
+      // // Send another message with new text
+      // chrome.tabs.sendMessage(
+      //   tab.id,
+      //   { type: "setVal", value: newVal },
+      //   (resp) => {
+      //     console.log(resp);
+      //   }
+      // );
     }
   });
 }
