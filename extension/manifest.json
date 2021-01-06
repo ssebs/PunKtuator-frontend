@@ -8,8 +8,14 @@
     "512": "icon.png",
     "16": "icon-16.png"
   },
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "activeTab", "tabs"],
   "background": {
     "scripts": ["background.js"]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
 }
